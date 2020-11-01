@@ -1,11 +1,11 @@
 # cwlogs-alert
 
-Cwlogs-alert is a tool for alerting of patters of interest from data collected by Cloudwatch logs. 
+Cwlogs-alert is a tool for alerting based on patterns of interest from data collected by Cloudwatch logs. 
 
 # Overview
 
-Cwlogs-alert works by executing LogInsights queries against cloudwatch log groups and sending an SNS notification if match is found.
-It keeps an in-memory database where it tracks rules that are in Alert mode, and it sends a recovery notification when the rule no longer match.
+Cwlogs-alert works by executing LogInsights queries against cloudwatch log groups and sending an SNS notification if a match is found.
+It keeps an in-memory database where it tracks rules that are in Alert mode and sends a recovery notification when the rule no longer matches.
 
 # Running cwlogs-alert
 ## Install 
@@ -45,7 +45,7 @@ Result:
 {{  .Result }}
 """
 ```
-* run_interval = a string representing how long to wait before the query cycles (defaults to 60s ). 
+* run_interval - a string representing how long to wait before the query cycles (defaults to 60s ). 
 * template - a golang text/template that is used to render the message that will be send.
 
 ## Rules
