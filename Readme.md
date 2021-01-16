@@ -88,7 +88,7 @@ Result:
     sns_topic = "arn:aws:sns:us-west-2:1234565789:cwlogs-alert"
   [rule.X]
      ......
-'''
+```
 * name - Name of the rule
 * log_group - the cloudwatchlogs log group that contains the log streams we would like to search in
 * num_events - the minimum number of events our query should produce to trigger the alert
